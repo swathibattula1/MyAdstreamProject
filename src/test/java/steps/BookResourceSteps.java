@@ -17,7 +17,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 public class BookResourceSteps extends CommonClass {
     WebDriver driver = getDriver();
 
-    @Given("^I click on I Want to and then clicked on Book and then to A Resouce$")
+    @When("^I click on I Want to and then clicked on Book and then to A Resouce$")
     public void iClickOnIWantToAndThenClickedOnBookAndThenToAResouce() throws Throwable {
         MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
         myAdstreamHomePage.NavigateToResourceBookingPage();

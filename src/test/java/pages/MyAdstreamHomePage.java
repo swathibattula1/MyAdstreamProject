@@ -16,6 +16,7 @@ public class MyAdstreamHomePage extends AbstractPage {
         driver.manage().window().maximize();
          verifyTitle("MyAdstream");
          Thread.sleep(2000);
+         Logoff();
     }
 
     public ResourceBookingPage NavigateToResourceBookingPage() throws InterruptedException {
@@ -30,6 +31,12 @@ public class MyAdstreamHomePage extends AbstractPage {
         Thread.sleep(2000);
 
         return new ResourceBookingPage(driver);
+    }
+
+    public void Logoff(){
+        //WebElement dropdown=webElementId("id","A2");
+        click("id","A2");
+        click("cssSelector","#liLogOff>a");
     }
 
 }

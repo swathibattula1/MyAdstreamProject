@@ -56,9 +56,10 @@ public class MyAdstreamLoginSteps extends CommonClass {
     }
 
     @Then("^I should see 'MyAdstream' home page$")
-    public void i_should_see_MyAdstream_home_page() throws Throwable {
+        public void i_should_see_MyAdstream_home_page() throws Throwable {
         MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
         myAdstreamHomePage.verifyHomepage();
+
 
     }
 
@@ -80,6 +81,19 @@ public class MyAdstreamLoginSteps extends CommonClass {
         LandingPage landingPage = new LandingPage(driver);
         landingPage.Login(username, password);
 
+    }
+
+    @Given("^I am on 'MyAdstream' home page$")
+    public void iAmOnMyAdstreamHomePage() throws Throwable {
+        MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
+        myAdstreamHomePage.verifyHomepage();
+    }
+
+    @And("^I logoff$")
+    public void iLogoff() throws Throwable {
+        MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
+        myAdstreamHomePage.Logoff();
+        Thread.sleep(1000);
     }
 
 
