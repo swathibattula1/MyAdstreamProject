@@ -6,6 +6,7 @@ Feature: To test My Adstream Login screen
     When I enter <username> and <password>
     And I click on Login button
     Then I should see 'MyAdstream' home page
+    And I clicked on Logoff
     Examples:
       | username        | password  |
       | swathi.battula1 | Vinnu143* |
@@ -22,13 +23,14 @@ Feature: To test My Adstream Login screen
     Then I should see 'MyAdstream' home page
 
 
+
   Scenario: To navigate to Book a Resource screen
     Given I am on 'MyAdstream' home page
-    When I click on I Want to and then clicked on Book and then to A Resouce
+    When  I click on I Want to and then clicked on Book and then to A Resouce
     Then I should navigate to Book a Resource screen
 
 
-  Scenario: To Book a Resoource and Submit a valid Booking details
+  Scenario: To Book a Resoource
     Given I am on Booking Resource Page
     When I enter location
     And I enter category
@@ -38,7 +40,11 @@ Feature: To test My Adstream Login screen
     And I clicked on CheckAvailability button
     And I clicked on first date
     Then I entered into MakeBooking screen
-    And I entered following Booking details
+
+
+  Scenario: Submit a valid Booking details
+    Given I am on Make Booking details page
+    When I entered following Booking details
       | startTime | endTime | description                             |
       | 1:00      | 5:00    | Would like to have access to Desk cycle |
     And I clicked on MakeBooking button
@@ -47,8 +53,8 @@ Feature: To test My Adstream Login screen
 
   Scenario: To Apply for Receptionist job
     Given I click on Home link
-    Then I clicken on Mycareer icon
-    And I click on Receptionist job link
+    When I click on Mycareer icon
+    And I click on Technical Support Expert job link
     And I click on Apply for this job link
     And I job Enter all details
       | key       | values                   |

@@ -14,10 +14,12 @@ public class MyAdstreamHomePage extends AbstractPage {
     }
     public void verifyHomepage() throws InterruptedException {
         driver.manage().window().maximize();
+
          verifyTitle("MyAdstream");
          Thread.sleep(2000);
-         Logoff();
+
     }
+
 
     public ResourceBookingPage NavigateToResourceBookingPage() throws InterruptedException {
 

@@ -5,6 +5,7 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.BambooPage;
 import pages.MakeBookingPage;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyBambooSteps extends CommonClass {
-    WebDriver driver = getDriver();
+    private WebDriver driver = getDriver();
 
     @Then("^I entered into MakeBooking screen$")
     public void iEnteredIntoMakeBookingScreen() throws Throwable {
@@ -42,7 +43,7 @@ public class MyBambooSteps extends CommonClass {
     }
 
 
-    @And("^I entered following Booking details$")
+    @When("^I entered following Booking details$")
     public void iEnteredFollowingBookingDetails(DataTable table1) throws Throwable {
         MakeBookingPage makeBookingPage = new MakeBookingPage(driver);
         List<MyAdstreamLoginSteps.BookingResource> bookingResources = new ArrayList<MyAdstreamLoginSteps.BookingResource>();
@@ -59,16 +60,16 @@ public class MyBambooSteps extends CommonClass {
 
     }
 
-    @And("^I clicken on Mycareer icon$")
+    @When("^I click on Mycareer icon$")
     public void iClickenOnMycareerIcon() throws Throwable {
         MakeBookingPage makeBookingPage = new MakeBookingPage(driver);
         makeBookingPage.NavigateToBambooPage();
     }
 
-    @And("^I click on Receptionist job link$")
+    @And("^I click on Technical Support Expert job link$")
     public void iClickOnReceptionistJobLink() throws Throwable {
         BambooPage bambooPage = new BambooPage(driver);
-        bambooPage.ClickReceptionistLink();
+        bambooPage.ClickJobLink();
     }
 
     @And("^I click on Apply for this job link$")

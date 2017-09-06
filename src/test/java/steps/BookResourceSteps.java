@@ -15,7 +15,7 @@ import pages.ResourceBookingPage;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 public class BookResourceSteps extends CommonClass {
-    WebDriver driver = getDriver();
+    private WebDriver driver = getDriver();
 
     @When("^I click on I Want to and then clicked on Book and then to A Resouce$")
     public void iClickOnIWantToAndThenClickedOnBookAndThenToAResouce() throws Throwable {
@@ -43,6 +43,7 @@ public class BookResourceSteps extends CommonClass {
     public void iAmOnBookingResourcePage() throws Throwable {
         ResourceBookingPage resourceBookingPage = new ResourceBookingPage(driver);
         System.out.println("I am on Booking Resource page");
+        Thread.sleep(2000);
     }
 
     @And("^I enter category$")

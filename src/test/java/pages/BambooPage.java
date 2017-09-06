@@ -19,8 +19,8 @@ public class BambooPage extends AbstractPage {
         super(driver);
     }
 
-    public void ClickReceptionistLink() {
-        if (driver.findElement(By.className("ResAts__listing-link")).getText().equalsIgnoreCase("Receptionist")) {
+    public void ClickJobLink() {
+        if (driver.findElement(By.className("ResAts__listing-link")).getText().equalsIgnoreCase("Technical Support Expert")) {
             driver.findElement(By.className("ResAts__listing-link")).click();
         }
     }
@@ -48,12 +48,15 @@ public class BambooPage extends AbstractPage {
         sendKeys("xpath", ".//*[@id='applicationForm']/fieldset[1]/div[3]/div/div/input", data.get(4).get(1));
         sendKeys("xpath", ".//*[@id='address']", data.get(5).get(1));
         sendKeys("xpath", ".//*[@id='city']", data.get(6).get(1));
-        click("cssSelector", ".chzn-single.chosen-default>div>b");
+       /* click("cssSelector", ".chzn-single.chosen-default>div>b");
 
 
         sendKeys("cssSelector", ".ignore", "Angus");
+        driver.findElement(By.cssSelector(".ignore")).sendKeys(Keys.ENTER);*/
+
+       sendKeys("cssSelector",".state.state-field.text.wide.js-state-input","sabah");
         Thread.sleep(1000);
-        driver.findElement(By.cssSelector(".ignore")).sendKeys(Keys.ENTER);
+
 
         click("linkText", "Choose File");
         java.lang.Runtime.getRuntime().exec("C:\\Users\\swathi.battula\\Desktop\\FileUpload1.exe");

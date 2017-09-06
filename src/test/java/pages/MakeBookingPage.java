@@ -16,10 +16,10 @@ public class MakeBookingPage extends AbstractPage {
         super(driver);
     }
 
-   // WebElement calStarttime = webElementId("cssSelector", "#starttime");
-   // WebElement calEendtime = webElementId("cssSelector", "#endtime");
-   // WebElement btndescription = webElementId("xpath", ".//*[@id='RRB']/section/table/tbody/tr/td/table[2]/tbody/tr[3]/td[1]/table/tbody/tr[6]/td[2]/textarea");
-   // WebElement btnMakeBooking = webElementId("xpath", ".//*[@id='button1']");
+    // WebElement calStarttime = webElementId("cssSelector", "#starttime");
+    // WebElement calEendtime = webElementId("cssSelector", "#endtime");
+    // WebElement btndescription = webElementId("xpath", ".//*[@id='RRB']/section/table/tbody/tr/td/table[2]/tbody/tr[3]/td[1]/table/tbody/tr[6]/td[2]/textarea");
+    // WebElement btnMakeBooking = webElementId("xpath", ".//*[@id='button1']");
 
     public void EnterBookingResourceDetails(String startTime, String endTime, String description) throws InterruptedException {
         click("cssSelector", "#starttime");
@@ -36,12 +36,12 @@ public class MakeBookingPage extends AbstractPage {
         //driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         Thread.sleep(2000);
 
-        click("cssSelector", "#endtime");
+        /*click("cssSelector", "#endtime");
         List<WebElement> elements = driver.findElements(By.cssSelector("#endtime"));
         System.out.println(elements.size());
         for (WebElement element : elements) {
             System.out.println(element.getText());
-        }
+        }*/
         if (driver.findElement(By.cssSelector("#endtime")).getText().equalsIgnoreCase(endTime)) {
             click("cssSelector", "#endtime");
         }
@@ -60,8 +60,7 @@ public class MakeBookingPage extends AbstractPage {
         driver.switchTo().defaultContent();*/
     }
 
-    public void clickMakeBooking()
-    {
+    public void clickMakeBooking() {
         WebElement btnMakeBooking = webElementId("xpath", ".//*[@id='button1']");
         btnMakeBooking.click();
     }
@@ -70,16 +69,11 @@ public class MakeBookingPage extends AbstractPage {
         click("xpath", ".//*[@id='lnkHome']/div");
         Thread.sleep(1000);
     }
+
     public BambooPage NavigateToBambooPage() throws InterruptedException {
 
         click("xpath", "./*//*[@id='widgetBody']/div/div/div/fieldset/div/div/a/img");
-        Thread.sleep(2000);
-        //System.out.println(brow.driver().getCurrentUrl());// Store the current window handle
         String winHandleBefore = driver.getWindowHandle();
-
-        // Perform the click operation that opens new window
-
-        // Switch to new window opened
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }

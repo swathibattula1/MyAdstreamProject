@@ -28,8 +28,8 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
  */
 public class MyAdstreamLoginSteps extends CommonClass {
 
-    WebDriver driver = getDriver();
-    AbstractPage abstractPage = new AbstractPage(driver);
+    private WebDriver driver = getDriver();
+    private AbstractPage abstractPage = new AbstractPage(driver);
 
     @Given("^I navigate to MyAdstream Login screen$")
     public void i_navigate_to_MyAdstream_Login_screen() throws Throwable {
@@ -46,12 +46,14 @@ public class MyAdstreamLoginSteps extends CommonClass {
             landingPage.Login(user.username, user.password);
 
         }
+        driver.manage().window().maximize();
     }
 
     @And("^I click on Login button$")
     public void i_click_on_Login_button() throws Throwable {
         LandingPage landingPage = new LandingPage(driver);
         landingPage.ClickLogin();
+
 
     }
 
@@ -85,12 +87,19 @@ public class MyAdstreamLoginSteps extends CommonClass {
 
     @Given("^I am on 'MyAdstream' home page$")
     public void iAmOnMyAdstreamHomePage() throws Throwable {
-        MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
-        myAdstreamHomePage.verifyHomepage();
+
+        System.out.println("I am on MyAdstream Home screen");
     }
 
     @And("^I logoff$")
     public void iLogoff() throws Throwable {
+        MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
+        myAdstreamHomePage.Logoff();
+        Thread.sleep(1000);
+    }
+
+    @And("^I clicked on Logoff$")
+    public void iClickedOnLogoff() throws Throwable {
         MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
         myAdstreamHomePage.Logoff();
         Thread.sleep(1000);
