@@ -15,7 +15,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>MyAdstreamProject.runner.RunnerTest</mainClass>
+                            <mainClass>test.java.runner.RunnerTest</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
