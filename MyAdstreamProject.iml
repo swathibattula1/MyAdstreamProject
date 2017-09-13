@@ -14,7 +14,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://C:/Mydata/SeleniumDump/selenium-server-standalone-3.4.0.jar!/" />
+          <root url="jar://C:/mydata/SeleniumDump/selenium-server-standalone-3.4.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -23,7 +23,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://C:/Mydata/SeleniumDump/testng-6.8.5.jar!/" />
+          <root url="jar://C:/mydata/SeleniumDump/testng-6.8.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

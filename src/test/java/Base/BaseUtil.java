@@ -14,7 +14,7 @@ public class BaseUtil {
 
     protected WebDriver getDriver(){
         if(driver==null){
-            System.setProperty("webdriver.gecko.driver", "C:\\My Data\\SeleniumDump\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "C:\\mydata\\SeleniumDump\\geckodriver.exe");
             driver= new FirefoxDriver();
 
 
