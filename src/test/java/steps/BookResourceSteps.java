@@ -81,7 +81,7 @@ public class BookResourceSteps extends CommonClass {
 
     @And("^I entered date in it$")
     public void iEnteredDateInIt() throws Throwable {
-        sendKeys("cssSelector", ".Form-TextBox", "15/09/2017");
+        sendKeys("cssSelector", ".Form-TextBox", "15/11/2017");
         Thread.sleep(1000);
     }
 

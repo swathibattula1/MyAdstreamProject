@@ -67,7 +67,7 @@ public class MakeBookingPage extends AbstractPage {
 
     public void NavigateToHomePage() throws InterruptedException {
         click("xpath", ".//*[@id='lnkHome']/div");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 
     public BambooPage NavigateToBambooPage() throws InterruptedException {
