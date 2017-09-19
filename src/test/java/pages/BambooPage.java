@@ -60,7 +60,7 @@ public class BambooPage extends AbstractPage {
 
 
         click("linkText", "Choose File");
-        java.lang.Runtime.getRuntime().exec("C:\\Users\\swathi.battula\\Desktop\\FileUpload1.exe");
+        java.lang.Runtime.getRuntime().exec("C:\\Users\\swathi.battula\\Desktop\\FileUpload2.exe");
         sendKeys("id", "zip", "E78PD");
         click("xpath", ".//*[@id='applicationForm']/fieldset[2]/div[2]/div/div/button");
         driver.findElement(By.xpath(".//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[5]/a")).click();

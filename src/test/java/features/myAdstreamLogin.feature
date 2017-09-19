@@ -24,14 +24,10 @@ Feature: To test My Adstream Login screen
 
 
 
-  Scenario: To navigate to Book a Resource screen
+  Scenario: To navigate to 'Book a Resource' screen and book a resource
     Given I am on 'MyAdstream' home page
     When  I click on I Want to and then clicked on Book and then to A Resouce
     Then I should navigate to Book a Resource screen
-
-
-  Scenario: To Book a Resoource
-    Given I am on Booking Resource Page
     When I enter location
     And I enter category
     And I enter Resource
@@ -40,10 +36,6 @@ Feature: To test My Adstream Login screen
     And I clicked on CheckAvailability button
     And I clicked on first date
     Then I entered into MakeBooking screen
-
-
-  Scenario: Submit a valid Booking details
-    Given I am on Make Booking details page
     When I entered following Booking details
       | startTime | endTime | description                             |
       | 1:00      | 5:00    | Would like to have access to Desk cycle |
