@@ -3,6 +3,7 @@ package LIB;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,9 +21,10 @@ public class CommonClass {
     protected static WebDriver driver;
     protected WebDriver getDriver(){
         if(driver==null){
-            System.setProperty("webdriver.gecko.driver", "C:\\mydata\\SeleniumDump\\geckodriver.exe");
-
-            driver= new FirefoxDriver();
+           /* System.setProperty("webdriver.gecko.driver", "C:\\mydata\\SeleniumDump\\geckodriver.exe");
+            driver= new FirefoxDriver();*/
+            System.setProperty("webdriver.chrome.driver", "C:\\mydata\\SeleniumDump\\chromedriver.exe");
+            driver= new ChromeDriver();
 
 
         }
