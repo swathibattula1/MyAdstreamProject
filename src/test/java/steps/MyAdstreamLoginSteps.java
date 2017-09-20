@@ -3,25 +3,15 @@ package steps;
 
 import LIB.CommonClass;
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import pages.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 /**
  * Created by Swathi.Battula on 13/08/2017.
@@ -58,7 +48,7 @@ public class MyAdstreamLoginSteps extends CommonClass {
     }
 
     @Then("^I should see 'MyAdstream' home page$")
-        public void i_should_see_MyAdstream_home_page() throws Throwable {
+    public void i_should_see_MyAdstream_home_page() throws Throwable {
         MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
         myAdstreamHomePage.verifyHomepage();
 

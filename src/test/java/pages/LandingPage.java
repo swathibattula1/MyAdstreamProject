@@ -9,7 +9,7 @@ import LIB.CommonClass;
 
 
 public class LandingPage extends AbstractPage {
-    //CommonClass e;
+
     public LandingPage(WebDriver driver) {
         super(driver);
     }
@@ -18,49 +18,19 @@ public class LandingPage extends AbstractPage {
         driver.manage().window().maximize();
     }
 
-    WebElement txtusername=webElementId("id","Username");
-    //WebElement txtusername=driver.findElement(By.id("Username"));
-
-    WebElement txtpassword=webElementId("name","Password");
-   // WebElement txtpassword=driver.findElement(By.name("Password"));
-
-
-    WebElement btnLogin=webElementId("xpath",".//*[@id='loginbtn']");
-
-    //WebElement btnLogin=driver.findElement(By.xpath(".//*[@id='loginbtn']"));
-
-
-   /* @FindBy(how = How.CSS, using = "#Username")
-    public WebElement txtusername;*/
-
-
-
-
-    //WebElement txtusername=driver.findElement(By.id("Username"));
-
-
-  /*  @FindBy(how = How.NAME, using = "Password")
-    public WebElement txtpassword;
-
-
-    @FindBy(how = How.XPATH, using = ".//*[@id='loginbtn']")
-    public WebElement btnLogin;*/
-
+    WebElement txtusername = webElementId("id", "Username");
+    WebElement txtpassword = webElementId("name", "Password");
+    WebElement btnLogin = webElementId("xpath", ".//*[@id='loginbtn']");
 
     public void Login(String username, String password) {
-
-
         txtusername.sendKeys(username);
         txtpassword.sendKeys(password);
     }
 
 
-
-    public MyAdstreamHomePage ClickLogin(){
-       //btnLogin.click();
-
-        click("xpath",".//*[@id='loginbtn']");
-        return  new MyAdstreamHomePage(driver);
+    public MyAdstreamHomePage ClickLogin() {
+        click("xpath", ".//*[@id='loginbtn']");
+        return new MyAdstreamHomePage(driver);
     }
 
 }
