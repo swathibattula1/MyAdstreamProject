@@ -14,7 +14,7 @@ import java.util.List;
 
 public class CommonClass {
 
-    Actions action;
+    private Actions action;
     /*public CommonClass(WebDriver driver) {
         super(driver);
     }*/
@@ -32,7 +32,7 @@ public class CommonClass {
     }
 
     //WebElement
-    public WebElement webElementId(String identifier,String locator)
+    protected WebElement webElementId(String identifier,String locator)
     {
         WebElement e=null;
         switch (identifier)
@@ -100,6 +100,7 @@ public class CommonClass {
             System.out.println("");
             System.out.println("Given usercredentials are correct");
             System.out.println(title+" displayed" );
+
         }
         else
         {

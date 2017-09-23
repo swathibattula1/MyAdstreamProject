@@ -15,7 +15,24 @@ public class MyAdstreamHomePage extends AbstractPage {
     public void verifyHomepage() throws InterruptedException {
         driver.manage().window().maximize();
 
-         verifyTitle("MyAdstream");
+
+            if(driver.getTitle().equals("MyAdstream"))
+            {
+                System.out.println("");
+                System.out.println("Given usercredentials are correct");
+                System.out.println("MyAdstream is displayed" );
+                click("id","A2");
+                click("cssSelector","#liLogOff>a");
+            }
+            else
+            {
+                System.out.println("");
+                System.out.println("Given usercredentials are in correct");
+                System.out.println("Failed to display My Adstream");
+                return;
+            }
+
+
          Thread.sleep(2000);
 
     }

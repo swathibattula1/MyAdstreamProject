@@ -27,7 +27,7 @@ public class MyAdstreamLoginSteps extends CommonClass {
 
     }
 
-    @When("^I entered following details$")
+    @And("^I entered following details$")
     public void i_entered_following_details(DataTable table) throws Throwable {
         LandingPage landingPage = new LandingPage(driver);
         List<User> users = new ArrayList<User>();
@@ -51,6 +51,9 @@ public class MyAdstreamLoginSteps extends CommonClass {
     public void i_should_see_MyAdstream_home_page() throws Throwable {
         MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
         myAdstreamHomePage.verifyHomepage();
+        //myAdstreamHomePage.Logoff();
+        Thread.sleep(1000);
+
 
 
     }
@@ -75,7 +78,7 @@ public class MyAdstreamLoginSteps extends CommonClass {
 
     }
 
-    @Given("^I am on 'MyAdstream' home page$")
+    @When("^I am on 'MyAdstream' home page$")
     public void iAmOnMyAdstreamHomePage() throws Throwable {
 
         System.out.println("I am on MyAdstream Home screen");
@@ -119,8 +122,8 @@ public class MyAdstreamLoginSteps extends CommonClass {
     }
 
     public class JobDetails {
-        public String key;
-        public String values;
+        private String key;
+        private String values;
 
         public JobDetails(String key, String values) {
             this.key = key;

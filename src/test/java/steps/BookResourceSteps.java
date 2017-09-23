@@ -17,20 +17,20 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 public class BookResourceSteps extends CommonClass {
     private WebDriver driver = getDriver();
 
-    @When("^I click on I Want to and then clicked on Book and then to A Resouce$")
+    @And("^I click on I Want to and then clicked on Book and then to A Resouce$")
     public void iClickOnIWantToAndThenClickedOnBookAndThenToAResouce() throws Throwable {
         MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
         myAdstreamHomePage.NavigateToResourceBookingPage();
 
     }
 
-    @Then("^I should navigate to Book a Resource screen$")
+    @And("^I should navigate to Book a Resource screen$")
     public void iShouldNavigateToBookAResourceScreen() throws Throwable {
         ResourceBookingPage resourceBookingPage = new ResourceBookingPage(driver);
         resourceBookingPage.verifyResourceScreen();
     }
 
-    @When("^I enter location$")
+    @And("^I enter location$")
     public void iEnterLocation() throws Throwable {
         ResourceBookingPage resourceBookingPage = new ResourceBookingPage(driver);
         Select location = new Select(driver.findElement(By.xpath(".//*[@id='location']")));

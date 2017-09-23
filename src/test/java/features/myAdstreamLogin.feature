@@ -6,7 +6,7 @@ Feature: To test My Adstream Login screen
     When I enter <username> and <password>
     And I click on Login button
     Then I should see 'MyAdstream' home page
-    And I clicked on Logoff
+
     Examples:
       | username        | password  |
       | swathi.battula1 | Vinnu143* |
@@ -14,29 +14,24 @@ Feature: To test My Adstream Login screen
       | swathi.battula  | Vinnu143* |
 
 
-  Scenario: To test Login functionality
+  Scenario: To Login and then navigate to 'Book a Resource' screen and book a resource
     Given I navigate to MyAdstream Login screen
-    When I entered following details
+    And I entered following details
       | username       | password  |
       | swathi.battula | Vinnu143* |
     And I click on Login button
-    Then I should see 'MyAdstream' home page
-
-
-
-  Scenario: To navigate to 'Book a Resource' screen and book a resource
-    Given I am on 'MyAdstream' home page
-    When  I click on I Want to and then clicked on Book and then to A Resouce
-    Then I should navigate to Book a Resource screen
-    When I enter location
+    When I am on 'MyAdstream' home page
+    And  I click on I Want to and then clicked on Book and then to A Resouce
+    And I should navigate to Book a Resource screen
+    And I enter location
     And I enter category
     And I enter Resource
     And I cleared Weeks of field
     And I entered date in it
     And I clicked on CheckAvailability button
     And I clicked on first date
-    Then I entered into MakeBooking screen
-    When I entered following Booking details
+    And I entered into MakeBooking screen
+    And I entered following Booking details
       | startTime | endTime | description                             |
       | 1:00      | 5:00    | Would like to have access to Desk cycle |
     And I clicked on MakeBooking button

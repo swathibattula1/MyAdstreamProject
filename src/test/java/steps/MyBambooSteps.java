@@ -17,7 +17,7 @@ import java.util.List;
 public class MyBambooSteps extends CommonClass {
     private WebDriver driver = getDriver();
 
-    @Then("^I entered into MakeBooking screen$")
+    @And("^I entered into MakeBooking screen$")
     public void iEnteredIntoMakeBookingScreen() throws Throwable {
         ResourceBookingPage resourceBookingPage = new ResourceBookingPage(driver);
         resourceBookingPage.NavigateToMakeBooking();
@@ -43,7 +43,7 @@ public class MyBambooSteps extends CommonClass {
     }
 
 
-    @When("^I entered following Booking details$")
+    @And("^I entered following Booking details$")
     public void iEnteredFollowingBookingDetails(DataTable table1) throws Throwable {
         MakeBookingPage makeBookingPage = new MakeBookingPage(driver);
         List<MyAdstreamLoginSteps.BookingResource> bookingResources = new ArrayList<MyAdstreamLoginSteps.BookingResource>();
