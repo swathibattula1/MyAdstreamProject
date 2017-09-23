@@ -38,7 +38,7 @@ Feature: To test My Adstream Login screen
     Then Booking is done
 
 
-  Scenario: To Apply for Receptionist job
+  Scenario: To Apply for 'Technical Support Expert' job
     Given I click on Home link
     When I click on Mycareer icon
     And I click on Technical Support Expert job link
