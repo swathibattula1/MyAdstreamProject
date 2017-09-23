@@ -21,7 +21,7 @@ Feature: To test My Adstream Login screen
       | swathi.battula | Vinnu143* |
     And I click on Login button
     When I am on 'MyAdstream' home page
-    And  I click on I Want to and then clicked on Book and then to A Resouce
+    And  I click on I Want to and then clicked on Book and then to A Resource
     And I should navigate to Book a Resource screen
     And I enter location
     And I enter category
