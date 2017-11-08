@@ -38,7 +38,7 @@ public class MyBambooSteps extends CommonClass {
     @Then("^Booking is done$")
     public void bookingIsDone() throws Throwable {
 
-        System.out.println("Booking successful");
+        System.out.println("Booking is successfully done");
 
     }
 
