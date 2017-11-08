@@ -27,7 +27,7 @@ public class MyAdstreamLoginSteps extends CommonClass {
 
     }
 
-    @And("^I entered following details$")
+    @Given("^I entered following details$")
     public void i_entered_following_details(DataTable table) throws Throwable {
         LandingPage landingPage = new LandingPage(driver);
         List<User> users = new ArrayList<User>();

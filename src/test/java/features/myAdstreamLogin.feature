@@ -13,8 +13,8 @@ Feature: To test My Adstream Login screen
 
 
   Scenario: To Login and then navigate to 'Book a Resource' screen and book a resource
-    Given I navigate to MyAdstream Login screen
-    And I entered following details
+
+    Given I entered following details
       | username       | password  |
       | swathi.battula | Vinnu143* |
     And I click on Login button
@@ -37,6 +37,7 @@ Feature: To test My Adstream Login screen
 
 
   Scenario: To Apply for 'Technical Support Expert' job
+
     Given I click on Home link
     When I click on Mycareer icon
     And I click on Technical Support Expert job link
