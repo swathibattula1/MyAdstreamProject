@@ -50,7 +50,7 @@ public class MyAdstreamLoginSteps extends CommonClass {
     }
 
     @Then("^I should see 'MyAdstream' home page$")
-    public void ái_should_see_MyAdstream_home_page() throws Throwable {
+    public void i_should_see_MyAdstream_home_page() throws Throwable {
         MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
         myAdstreamHomePage.verifyHomepage();
         //myAdstreamHomePage.Logoff();
