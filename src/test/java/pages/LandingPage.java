@@ -22,9 +22,10 @@ public class LandingPage extends AbstractPage {
     WebElement txtpassword = webElementId("name", "Password");
     WebElement btnLogin = webElementId("xpath", ".//*[@id='loginbtn']");
 
-    public void Login(String username, String password) {
+    public void Login(String username, String password) throws InterruptedException {
         txtusername.sendKeys(username);
         txtpassword.sendKeys(password);
+        Thread.sleep(4000);
     }
 
 

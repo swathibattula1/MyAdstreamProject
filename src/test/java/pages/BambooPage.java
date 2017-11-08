@@ -20,8 +20,8 @@ public class BambooPage extends AbstractPage {
     }
 
     public void ClickJobLink() throws InterruptedException {
-        if (driver.findElement(By.className("ResAts__listing-link")).getText().equalsIgnoreCase("Technical Support Expert")) {
-            driver.findElement(By.className("ResAts__listing-link")).click();
+        if (driver.findElement(By.xpath(".//*[@id='resultDiv']/div/ul/li[2]/div[2]/div[1]/a")).getText().equalsIgnoreCase("Technical Support Expert")) {
+            driver.findElement(By.xpath(".//*[@id='resultDiv']/div/ul/li[2]/div[2]/div[1]/a")).click();
         }
     }
 

@@ -36,6 +36,7 @@ public class MyAdstreamLoginSteps extends CommonClass {
             landingPage.Login(user.username, user.password);
 
         }
+        Thread.sleep(2000);
         driver.manage().window().maximize();
     }
 
@@ -43,12 +44,13 @@ public class MyAdstreamLoginSteps extends CommonClass {
     public void i_click_on_Login_button() throws Throwable {
         LandingPage landingPage = new LandingPage(driver);
         landingPage.ClickLogin();
+        Thread.sleep(2000);
 
 
     }
 
     @Then("^I should see 'MyAdstream' home page$")
-    public void i_should_see_MyAdstream_home_page() throws Throwable {
+    public void ái_should_see_MyAdstream_home_page() throws Throwable {
         MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
         myAdstreamHomePage.verifyHomepage();
         //myAdstreamHomePage.Logoff();
@@ -62,7 +64,11 @@ public class MyAdstreamLoginSteps extends CommonClass {
     @When("^I enter <username> and <password>$")
     public void iEnterUsernameAndPassword(DataTable table) throws Throwable {
         LandingPage landingPage = new LandingPage(driver);
+
+        //To create an array list
         List<User> users = new ArrayList<User>();
+
+        //To store all the users
         users = table.asList(User.class);
         for (User user : users) {
             landingPage.Login(user.username, user.password);

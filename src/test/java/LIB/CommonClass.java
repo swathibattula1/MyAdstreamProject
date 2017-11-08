@@ -15,9 +15,7 @@ import java.util.List;
 public class CommonClass {
 
     private Actions action;
-    /*public CommonClass(WebDriver driver) {
-        super(driver);
-    }*/
+
     protected static WebDriver driver;
     protected WebDriver getDriver(){
         if(driver==null){

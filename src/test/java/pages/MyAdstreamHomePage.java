@@ -27,7 +27,7 @@ public class MyAdstreamHomePage extends AbstractPage {
             else
             {
                 System.out.println("");
-                System.out.println("Given usercredentials are in correct");
+                System.out.println("Wrong usercredentials");
                 System.out.println("Failed to display My Adstream");
                 return;
             }

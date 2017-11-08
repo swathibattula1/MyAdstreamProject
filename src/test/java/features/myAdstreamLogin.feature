@@ -1,12 +1,10 @@
 Feature: To test My Adstream Login screen
 
-
   Scenario Outline: To test Login functionality with Multiple credentials
     Given I navigate to MyAdstream Login screen
     When I enter <username> and <password>
     And I click on Login button
     Then I should see 'MyAdstream' home page
-
     Examples:
       | username        | password  |
       | swathi.battula1 | Vinnu143* |
