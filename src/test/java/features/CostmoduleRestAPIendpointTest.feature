@@ -12,3 +12,5 @@ Feature: Testing Adcost Api endpoints.
     When I set the headers and parameters
     And I set the Request body and submit it
     Then print the response of postcall
+
+
