@@ -57,13 +57,13 @@ public class AdcostEndpointsSteps {
         return response;
     }
 
-    @And("^validate the response schema$")
+   /* @And("^validate the response schema$")
     public void validateTheResponseSchema() throws Throwable {
         given().param("pageNumber", "1").and().param("pageSize", "100").and().param("$id$", "59fc5c6f9ee5eb0c576b5a91").
                 when().get("http://10.81.2.82:5000/v1/costs/search").
                 then().
                 assertThat().body(matchesJsonSchemaInClasspath("ExpectedResponses/GETapiresponse.json"));
-    }
+    }*/
 
 
     @When("^I set the headers and parameters$")
