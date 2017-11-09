@@ -36,6 +36,7 @@ public class AdcostEndpointsSteps {
 
     @And("^perform the  get request$")
     public void performTheGetRequest() throws Throwable {
+        System.out.println("Performing ALL Costs GET request call");
         String response = given().param("pageNumber", "1").and().param("pageSize", "100").and().param("$id$", "59fc5c6f9ee5eb0c576b5a91").
                 when().get("http://10.81.2.82:5000/v1/costs/search").asString();
     }
