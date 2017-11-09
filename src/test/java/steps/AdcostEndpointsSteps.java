@@ -155,9 +155,5 @@ public class AdcostEndpointsSteps {
 
     }
 
-    @And("^I set the Requestbody and submit it$")
-    public void iSetTheRequestbodyAndSubmitIt(DataTable table) throws Throwable {
-        List<List<String>> data = table.raw();
 
-    }
 }
