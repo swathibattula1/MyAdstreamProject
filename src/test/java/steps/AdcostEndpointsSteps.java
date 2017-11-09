@@ -1,6 +1,7 @@
 package steps;
 
 import com.testapi.*;
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import LIB.CommonClass;
 import cucumber.api.java.en.And;
@@ -11,6 +12,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
@@ -149,6 +152,12 @@ public class AdcostEndpointsSteps {
 
         System.out.println(response);
 
+
+    }
+
+    @And("^I set the Requestbody and submit it$")
+    public void iSetTheRequestbodyAndSubmitIt(DataTable table) throws Throwable {
+        List<List<String>> data = table.raw();
 
     }
 }
