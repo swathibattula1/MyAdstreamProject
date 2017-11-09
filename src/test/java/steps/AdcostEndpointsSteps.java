@@ -28,20 +28,20 @@ public class AdcostEndpointsSteps {
     private ProductionType test6 = new ProductionType();
     private ContentType test7 = new ContentType();
     private String[] agency1 = {"Abby Jenkins (Grey)"};
-    @Given("^GetAllcosts endpoint is available$")
-    public void getallcostsEndpointIsAvailable() throws Throwable {
+    @Given("^I have getAllcosts endpoint$")
+    public void IhavegetAllcostsendpoint() throws Throwable {
         System.out.println("endpoint to get all the costs is : http://10.81.2.82:5000/v1/costs/search");
     }
 
 
-    @And("^perform the  get request$")
-    public void performTheGetRequest() throws Throwable {
+    @And("^I perform the  get request$")
+    public void IperformTheGetRequest() throws Throwable {
         System.out.println("Performing ALL Costs GET request call");
         String response = given().param("pageNumber", "1").and().param("pageSize", "100").and().param("$id$", "59fc5c6f9ee5eb0c576b5a91").
                 when().get("http://10.81.2.82:5000/v1/costs/search").asString();
     }
 
-    @Then("^validate the response and get the status code$")
+    @Then("^I validate the response and get the status code$")
     public void validateTheResponseAndGetTheStatusCode() throws Throwable {
         io.restassured.response.Response response=
                 given().param("pageNumber", "1").and().param("pageSize", "100").and().param("$id$", "59fc5c6f9ee5eb0c576b5a91").
@@ -53,7 +53,7 @@ public class AdcostEndpointsSteps {
         System.out.println("Status code: " +response.statusCode());
     }
 
-    @And("^print the reponse$")
+    @And("^print the response$")
     public String printTheReponse() throws Throwable {
         String response = given().param("pageNumber", "1").and().param("pageSize", "100").and().param("$id$", "59fc5c6f9ee5eb0c576b5a91").
                 when().get("http://10.81.2.82:5000/v1/costs/search").asString();
@@ -75,7 +75,7 @@ public class AdcostEndpointsSteps {
         given().body(test1).when().contentType(io.restassured.http.ContentType.JSON).post("http://10.81.2.82:5000/v1/costs?$id$=59fc5c6f9ee5eb0c576b5a91");
     }
 
-    @Given("^I have post cost details enpoint$")
+    @Given("^I have post cost details endpoint$")
     public void iHavePostCostDetailsEnpoint() throws Throwable {
         System.out.println("endpoint to get all the costs is : http://10.81.2.82:5000/v1/costs?");
     }
@@ -157,4 +157,60 @@ public class AdcostEndpointsSteps {
     }
 
 
-}
+    @And("^I set the Requestbody and submit it$")
+    public void iSetTheRequestbodyAndSubmitIt(DataTable table) throws Throwable {
+        List<List<String>> data = table.raw();
+        //Organisation values
+        test5.setProjects("null");
+        test5.setDictionaryId(data.get(1).get(1));
+        test5.setKey(data.get(2).get(1));
+        test5.setValue(data.get(3).get(1));
+        test5.setVisible(data.get(4).get(1));
+        test5.setId(data.get(5).get(1));
+
+        //Budget region values
+        test3.setId(data.get(6).get(1));
+        test3.setKey(data.get(7).get(1));
+        test3.setName(data.get(8).get(1));
+
+        //Production Type values
+        test6.setId(data.get(9).get(1));
+        test6.setKey(data.get(10).get(1));
+        test6.setValue(data.get(11).get(1));
+
+
+        //Content type values
+        test7.setDictionaryId(data.get(12).get(1));
+        test7.setId(data.get(13).get(1));
+        test7.setKey(data.get(14).get(1));
+        test7.setProjects(data.get(15).get(1));
+        test7.setValue(data.get(16).get(1));
+        test7.setVisible(data.get(17).get(1));
+
+        //data values
+        test4.setAgencyCurrency(data.get(18).get(1));
+        test4.setAgencyProducer(agency1);
+        test4.setBudgetRegion(test3);
+        test4.setCampaign((data.get(19).get(1)));
+        test4.setContentType(test7);
+        test4.setCostType((data.get(20).get(1)));
+        test4.setDescription((data.get(21).get(1)));
+        test4.setInitialBudget((data.get(22).get(1)));
+        test4.setIsAIPE((data.get(23).get(1)));
+        test4.setIsCurrencyChanged((data.get(24).get(1)));
+        test4.setTitle((data.get(25).get(1)));
+        test4.setSmoId((data.get(26).get(1)));
+        test4.setProductionType(test6);
+        test4.setProjectId((data.get(27).get(1)));
+        test4.setOrganisation(test5);
+
+        //Set Stage details
+        test2.setData(test4);
+
+        test1.setTemplateId("c17fc46e-6d25-4aa1-afb5-9913d02804df");
+        test1.setStageDetails(test2);
+    }
+
+
+    }
+

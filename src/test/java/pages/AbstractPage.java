@@ -14,7 +14,7 @@ public class AbstractPage extends CommonClass {
         this.driver = driver;
     }
 
-    @Before
+
     public LandingPage NavigateToWebApp() throws InterruptedException {
         driver.navigate().to("https://my.adstream.com");
         Thread.sleep(2000);
@@ -22,7 +22,7 @@ public class AbstractPage extends CommonClass {
     }
 
 
-    @After
+
     public void CloseTest(Scenario scenario){
 
         if(scenario.isFailed()){
