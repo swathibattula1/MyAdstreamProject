@@ -3,6 +3,7 @@ package steps;
 
 import LIB.CommonClass;
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -102,6 +103,11 @@ public class MyAdstreamLoginSteps extends CommonClass {
         MyAdstreamHomePage myAdstreamHomePage = new MyAdstreamHomePage(driver);
         myAdstreamHomePage.Logoff();
         Thread.sleep(1000);
+    }
+
+    @And("^I test the scenario$")
+    public void iTestTheScenario() throws Throwable {
+        System.out.println("Hello");
     }
 
 

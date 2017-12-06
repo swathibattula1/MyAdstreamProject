@@ -70,12 +70,14 @@ public class MyBambooSteps extends CommonClass {
     public void iClickOnReceptionistJobLink() throws Throwable {
         BambooPage bambooPage = new BambooPage(driver);
         bambooPage.ClickJobLink();
+        Thread.sleep(2000);
     }
 
     @And("^I click on Apply for this job link$")
     public void iClickOnApplyForThisJobLink() throws Throwable {
         BambooPage bambooPage = new BambooPage(driver);
         bambooPage.ClickApplyForThisJob();
+        Thread.sleep(2000);
     }
 
 
